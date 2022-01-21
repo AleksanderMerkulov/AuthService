@@ -1,5 +1,5 @@
 <p>auth works!</p>
-<div>
+<div *ngIf='regCondition'>
     <div>
         <label>email</label>
         <input [(ngModel)]='user.email'>
@@ -9,4 +9,16 @@
         <input [(ngModel)]='user.password'>
     </div>
     <button (click)='auth()'>click</button>
+</div>
+<button *ngIf='!regCondition' (click)='getRegF()'>Sign in?</button>
+<div *ngIf='getReg'>
+    <div>
+        <label>email</label>
+        <input [(ngModel)]='user.email'>
+    </div>
+    <div>
+        <label>pas</label>
+        <input [(ngModel)]='user.password'>
+    </div>
+    <button (click)='reg()'>REGISTRATION!</button>
 </div>

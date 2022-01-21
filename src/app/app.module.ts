@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RegComponent } from './reg/reg.component';
 
 
 const appRoutes:Routes=[
   {path:'', component:HomeComponent},
   {path:'auth', component:AuthComponent},
-  {path:'profile', component:ProfileComponent}
+  {path:'profile', component:ProfileComponent},
+  {path:'reg', component:RegComponent},
 
 ]
 
@@ -23,7 +25,8 @@ const appRoutes:Routes=[
     AppComponent,
     AuthComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    RegComponent
   ],
   imports: [
     BrowserModule,
